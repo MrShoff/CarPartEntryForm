@@ -21,7 +21,7 @@ class App extends Component {
   };
 
   handleDelete(id) {
-    fetch("http://happylittleapps.com:3001/carparts/".concat(id), {
+    fetch("http://car-part-demo-api.azurewebsites.net/carparts/".concat(id), {
       method: "DELETE"
     }).then(response => {
       let newAlert;
@@ -122,7 +122,7 @@ class App extends Component {
   }
 
   updateMasterList() {
-    fetch("http://happylittleapps.com:3001/carparts")
+    fetch("http://car-part-demo-api.azurewebsites.net/carparts")
       .then(response => response.json())
       .then(data =>
         this.setState({

@@ -54,7 +54,7 @@ class CarPartEntryForm extends Component {
 
     if (id === undefined) {
       // new
-      fetch("http://happylittleapps.com:3001/carparts", {
+      fetch("http://car-part-demo-api.azurewebsites.net/carparts", {
         method: "POST",
         body: newPartJson,
         headers: {
@@ -85,7 +85,7 @@ class CarPartEntryForm extends Component {
       });
     } else {
       // edit
-      fetch("http://happylittleapps.com:3001/carparts/" + id, {
+      fetch("http://car-part-demo-api.azurewebsites.net/carparts/" + id, {
         method: "PUT",
         body: newPartJson,
         headers: {

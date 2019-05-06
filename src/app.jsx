@@ -21,7 +21,7 @@ class App extends Component {
   };
 
   handleDelete(id) {
-    fetch("http://car-part-demo-api.azurewebsites.net/carparts/".concat(id), {
+    fetch("https://car-part-demo-api.azurewebsites.net/carparts/".concat(id), {
       method: "DELETE"
     }).then(response => {
       let newAlert;
@@ -122,7 +122,7 @@ class App extends Component {
   }
 
   updateMasterList() {
-    fetch("http://car-part-demo-api.azurewebsites.net/carparts")
+    fetch("https://car-part-demo-api.azurewebsites.net/carparts")
       .then(response => response.json())
       .then(data =>
         this.setState({
